@@ -1,0 +1,18 @@
+.card-container{
+    height:200px;
+    width:200px;
+    perspective: relative;
+    position: relative;
+    margin: auto;
+    transition: ease-in;
+}
+
+
+.card{
+    height:200px;
+    width:200px;
+    position: absolute;
+    border: 1px black;
+    transform-style: preserve-3d;
+    transition: all 0.4s ease-in-out;
+}
