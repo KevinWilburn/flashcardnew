@@ -2,6 +2,7 @@ import React from 'react'
 import './flashcard.css'
 
 const Card = (props) => (
+    <div className="flashcard-page">
     <div className="card-container">
         <div className="card">
             <div className="front">
@@ -12,6 +13,8 @@ const Card = (props) => (
             </div>
         </div>
     </div>
+    </div>
 )
  export default Card
   
+

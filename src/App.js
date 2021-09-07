@@ -2,6 +2,7 @@ import React,{ Component, useState } from "react";
 import "./app.css"
 import Card from './Flashcard'
 import DrawButton from "./drawbutton";
+import axios from "axios"
 
 
 class App extends Component{
@@ -28,6 +29,20 @@ class App extends Component{
       cards: currentCards,
       currentCard: this.getRandomCard(currentCards)
     })
+  }
+  async getAllCards(){
+    try{
+      let response = await axios.get(
+        "http://localhost:4000/api/flashcards/"
+      );
+      console.log(response.data);
+      this.setState({
+        front: response.data,
+        back: response.data,
+      });
+    }catch (ex) {
+      console.log(ex);
+    }
   }
 
   getRandomCard(currentCards){
